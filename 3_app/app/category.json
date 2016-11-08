@@ -1,0 +1,16 @@
+{
+  "animals": [
+    {
+      "word": "Dog",
+      "file": "dog.png"
+    },
+    {
+      "word": "Bird",
+      "file": "bird.png"
+    },
+    {
+      "word": "Fox",
+      "file": "fox.png"
+    }
+  ]
+}

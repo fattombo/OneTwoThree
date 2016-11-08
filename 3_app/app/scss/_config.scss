@@ -1,0 +1,115 @@
+/* C O L O R
+   ---------------------------
+   ---------------------------
+*/
+$color-primary: #E65C5C;
+$color-primary-light: #FF7373;
+$color-primary-dark: #CC4747;
+
+$color-secondary: #5C95E6;
+$color-secondary-light: #73ADFF;
+$color-secondary-dark: #477ECC;
+
+$color-accent: #66CC88;
+
+$color-lightgrey: #DAE1E6;
+$color-lightgrey-light: #EDF0F2;
+$color-lightgrey-dark: #CDD4D9;
+$color-lightgrey-darker: #C2C8CC;
+
+$color-darkgrey: #3E454D;
+$color-darkgrey-light: #575F66;
+$color-darkgrey-dark: #262D33;
+
+/* T Y P E
+   ---------------------------
+   ---------------------------
+*/
+$font-primary: 'Domus', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-secondary: 'Space Mono', 'Lucida Console', Monaco, monospace;
+
+@mixin type-title-big {
+  font-size: 72px;
+  line-height: 80px;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
+@mixin type-title {
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
+@mixin type-button {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@mixin type-menu {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@mixin type-text {
+  font-family: $font-secondary;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* G R I D
+   ---------------------------
+   ---------------------------
+*/
+@mixin flex-col($justify) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+
+}
+
+@mixin flex-row($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin block-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* E L E M E N T S
+   ---------------------------
+   ---------------------------
+*/
+
+// @mixin btn-primary($type) {
+//   display: inline-block;
+//   @include type-button;
+//   text-align: center;
+//   padding: 21px 40px 27px;
+//   max-width: 320px;
+//   @include borderRadius(40px);
+//
+//   @if $type == solid {
+//     color: $color-lightgrey-light;
+//     background-color: $color-primary;
+//
+//     &:hover {
+//       background-color: $color-primary-dark;
+//     }
+//   } @else if $type == outline {
+//     color: $color-primary;
+//     background-color: $color-lightgrey-light;
+//     border: 2px solid $color-primary;
+//
+//     &:hover {
+//       background-color: $color-primary-dark;
+//     }
+//   }
+// }

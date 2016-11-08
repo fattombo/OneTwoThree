@@ -1,0 +1,15 @@
+/* B U T T O N S
+   ---------------------------
+   ---------------------------
+*/
+
+@mixin btn-primary {
+  display: inline-block;
+  @include type-button;
+  color: $color-light;
+  background-color: $color-primary;
+  padding-top: 21px;
+  padding-bottom: 27px;
+  width: 320px;
+  @include borderRadius(40px);
+}
