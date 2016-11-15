@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/40b/tick--green</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/40b/tick--green" fill="#66CC88">
+            <g id="tick">
+                <path d="M20,40 C31.045695,40 40,31.045695 40,20 C40,8.954305 31.045695,0 20,0 C8.954305,0 0,8.954305 0,20 C0,31.045695 8.954305,40 20,40 Z M8.51041883,22.0142656 C7.77007191,21.1919387 7.7998333,19.8892341 8.58194014,19.0994969 L8.83403033,18.8449473 C9.61387739,18.0574919 10.9638598,17.962729 11.8464606,18.6311377 L16.3984007,22.0784 L28.2381289,11.5026118 C29.0612129,10.7673955 30.3583854,10.8074618 31.1404922,11.597199 L31.3925824,11.8517486 C32.1724295,12.639204 32.2389673,13.9629688 31.5328569,14.8185681 L18.695553,30.3736245 C17.9931774,31.2246982 16.8281761,31.2530631 16.0832728,30.4256752 L8.51041883,22.0142656 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

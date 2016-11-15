@@ -1,3 +1,7 @@
+/* G L O B A L
+   ---------------------------
+   ---------------------------
+*/
 body {
   font-family: $font-primary;
   background-color: $color-lightgrey-light;
@@ -8,30 +12,25 @@ a {
   text-decoration: none;
 }
 
-.start, .learn, .info, .one {
+#app-wrapper {
   @include flex-col(space-between);
   height: 100vh;
 }
 
+/* H E A D E R
+   ---------------------------
+   ---------------------------
+*/
 .header {
   flex-shrink: 0;
   min-height: 60px;
   padding: 10px;
+  @include flex-row(space-between);
+  align-items: center;
+  z-index: 100;
 
-  .start & {
+  &.header--pushRight {
     @include flex-row(flex-end);
-  }
-
-  .learn & {
-    @include flex-row(space-between);
-  }
-
-  .info & {
-    @include flex-row(flex-start);
-  }
-
-  .one & {
-    @include flex-row(space-between);
   }
 
   .header__menuItem {
@@ -60,13 +59,23 @@ a {
       border-radius: 20px;
     }
   }
+
+  .header__title {
+    @include type-button;
+    color: $color-lightgrey-darker;
+  }
 }
 
+/* F O O T E R
+   ---------------------------
+   ---------------------------
+*/
 .footer {
   flex-shrink: 0;
   min-height: 40px;
-  padding: 10px;
+  padding: 10px 20px;
   @include flex-row(space-between);
+  z-index: 100;
 
   .footer__copy {
     @include type-text;
@@ -90,75 +99,183 @@ a {
   }
 }
 
+
+/* S E C T I O N
+   ---------------------------
+   ---------------------------
+*/
 .section {
   flex-grow: 1;
   flex-shrink: 1;
-  overflow: auto;
+  // overflow: auto;
   text-align: center;
+  @include flex-col(space-around);
+  align-items: center;
+  z-index: 200;
 
   .section__title {
     @include type-title;
     text-align: center;
     color: $color-lightgrey-dark;
-    margin-bottom: 30px;
-    @include block-center;
-  }
 
-  .section__img {
-    display: block;
-    @include block-center;
-    margin-bottom: 40px;
-  }
-
-  %btn {
-    display: inline-block;
-    box-sizing: border-box;
-    @include type-button;
-    text-align: center;
-    max-width: 320px;
-    @include borderRadius(40px);
-  }
-
-  .section__button {
-    @extend %btn;
-    padding: 19px 40px 25px;
-    color: $color-primary;
-    background-color: $color-lightgrey-light;
-    border: 2px solid $color-primary;
-
-    &:hover {
-      color: $color-lightgrey-light;
-      background-color: $color-primary-dark;
-      border: 2px solid $color-primary-dark;
+    &.success {
+      color: $color-accent;
     }
   }
 
-  .section__button--solid {
-    @extend %btn;
-    padding: 21px 40px 27px;
-    color: $color-lightgrey-light;
-    background-color: $color-primary;
-
-    &:hover {
-      background-color: $color-primary-dark;
-    }
+  .section__main {
+    width: 60%;
+    @include flex-row(space-around);
+    align-items: center;
   }
 }
+
+%btn {
+  display: inline-block;
+  box-sizing: border-box;
+  @include type-button;
+  text-align: center;
+  // max-width: 320px;
+  @include borderRadius(40px);
+  transition: background .5s;
+}
+
+.section__button {
+  @extend %btn;
+  padding: 19px 40px 25px;
+  color: $color-primary;
+  background-color: $color-lightgrey-light;
+  border: 2px solid $color-primary;
+
+  &:hover {
+    color: $color-lightgrey-light;
+    background-color: $color-primary-dark;
+    border: 2px solid $color-primary-dark;
+  }
+}
+
+.section__button--solid {
+  @extend %btn;
+  padding: 21px 40px 27px;
+  color: $color-lightgrey-light;
+  background-color: $color-primary;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+
+/* L E A R N
+   ---------------------------
+   ---------------------------
+*/
 
 .category__name {
   font-weight: inherit;
+  pointer-events: none;
 }
 
-.category__img {
+%tempBtn {
+  flex: 0 0 auto;
+  cursor: pointer;
+  transition: transform .5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.prevBtn {
+  order: 1;
+  @extend %tempBtn;
+}
+
+.nextBtn {
+  order: 3;
+  @extend %tempBtn;
+}
+
+.nextStep {
+  order: 4;
+  @extend %tempBtn;
+  display: none;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+.category__img, .element__img {
+  flex: 0 0 auto;
+  order: 2;
   width: 320px;
   height: 320px;
-  margin-top: 30px;
-  margin-bottom: 30px;
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   @include borderRadius(320px / 2);
   @include shadow(0, 5px, 20px, $color-lightgrey-darker);
-  @include block-center;
+}
+
+.element__name {
+  @include type-title-big;
+  color: $color-darkgrey;
+}
+
+
+/* I N F O
+   ---------------------------
+   ---------------------------
+*/
+
+.info__background {
+  position: fixed;
+  height: 100vh;
+  width: 60%;
+  background-image: url(../images/girl.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.section__info {
+  width: 50%;
+  padding-right: 20px;
+  padding-left: 20px;
+  align-self: flex-end;
+  text-align: left;
+  @include flex-col(space-between);
+}
+
+.section__info__title {
+  @include type-title-big;
+  color: $color-secondary;
+  width: 80%;
+  min-width: 500px;
+  margin-bottom: 60px;
+}
+
+.section__info__text {
+  @include type-text;
+  @include flex-row(space-between);
+  align-items: flex-end;
+
+  .section__info__text--left {
+    width: 40%;
+    min-width: 200px;
+    color: $color-darkgrey;
+  }
+
+  .section__info__text--right {
+    width: 50%;
+    min-width: 300px;
+    color: $color-secondary;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
 }

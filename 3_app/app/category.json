@@ -12,5 +12,11 @@
       "word": "Fox",
       "file": "fox.png"
     }
+  ],
+  "fruits": [
+    {
+      "word": "Banana",
+      "file": "banana.jpg"
+    }
   ]
 }

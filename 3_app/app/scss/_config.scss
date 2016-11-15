@@ -78,38 +78,7 @@ $font-secondary: 'Space Mono', 'Lucida Console', Monaco, monospace;
   justify-content: $justify;
 }
 
-@mixin block-center {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 /* E L E M E N T S
    ---------------------------
    ---------------------------
 */
-
-// @mixin btn-primary($type) {
-//   display: inline-block;
-//   @include type-button;
-//   text-align: center;
-//   padding: 21px 40px 27px;
-//   max-width: 320px;
-//   @include borderRadius(40px);
-//
-//   @if $type == solid {
-//     color: $color-lightgrey-light;
-//     background-color: $color-primary;
-//
-//     &:hover {
-//       background-color: $color-primary-dark;
-//     }
-//   } @else if $type == outline {
-//     color: $color-primary;
-//     background-color: $color-lightgrey-light;
-//     border: 2px solid $color-primary;
-//
-//     &:hover {
-//       background-color: $color-primary-dark;
-//     }
-//   }
-// }

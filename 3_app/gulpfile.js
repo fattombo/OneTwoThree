@@ -48,6 +48,6 @@ gulp.task('browserSync', function() {
 gulp.task('default', ['browserSync', 'sass'], function(){
   gulp.watch('app/*.html', ['html']),
   gulp.watch('app/scss/*.scss', ['sass']),
-  gulp.watch('app/js/*.js', ['js']),
-  gulp.watch('app/images/**/*', ['imagemin']);
+  gulp.watch('app/js/*.js', ['js'])
+  // gulp.watch('app/images/**/*', ['imagemin']);
 });
